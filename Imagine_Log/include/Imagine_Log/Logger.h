@@ -23,9 +23,6 @@ class Logger
       Error,
       Fatal
    };
-   
-  public:
-    static bool Init(std::string profile_path = "");
 
  public:
    Logger(): async_write_(false){};
@@ -33,6 +30,8 @@ class Logger
    Logger(const Logger& logger){};
 
    virtual ~Logger(){};
+
+   bool Init(std::string profile_path = "");
 
    Logger* Log(LogLevel level, const char* format, ...);
 
