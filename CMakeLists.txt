@@ -56,3 +56,11 @@ endif()
 
 add_subdirectory(./Imagine_Time)
 add_subdirectory(./Imagine_Log)
+
+add_custom_target(
+    imagine_tool
+    echo "[Constructing LIB][Imagine Tool]: Starting Imagine_Tool target build building..."
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} # 在哪个目录下执行命令
+)
+
+add_dependencies(imagine_tool imagine_log imagine_time)
