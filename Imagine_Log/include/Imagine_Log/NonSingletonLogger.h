@@ -10,7 +10,7 @@ class NonSingletonLogger
 {
 
  public:
-    NonSingletonLogger();
+    NonSingletonLogger(){};
 
     ~NonSingletonLogger(){};
 };
