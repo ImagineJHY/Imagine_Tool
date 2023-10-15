@@ -1,7 +1,5 @@
 #include "Imagine_Log/Logger.h"
 
-#include "yaml-cpp/yaml.h"
-
 #include <fcntl.h>
 #include <stdarg.h>
 

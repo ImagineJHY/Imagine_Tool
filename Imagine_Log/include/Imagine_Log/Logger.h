@@ -5,6 +5,7 @@
 #include "ConsoleAppender.h"
 #include "FileAppender.h"
 #include "Imagine_Time/Timer.h"
+#include "yaml-cpp/yaml.h"
 
 #include <string>
 #include <mutex>
