@@ -6,7 +6,7 @@
 namespace Imagine_Tool
 {
 
-class NonSingletonLogger
+class NonSingletonLogger : public Logger
 {
 
  public:
