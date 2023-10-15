@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/Logger.cpp" "/home/imagine/MIT6824/Imagine_Tool/build/Imagine_Log/CMakeFiles/imagine_log.dir/src/Logger.cpp.o"
+  "/home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/NonSingletonLogger.cpp" "/home/imagine/MIT6824/Imagine_Tool/build/Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o"
+  "/home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/SingletonLogger.cpp" "/home/imagine/MIT6824/Imagine_Tool/build/Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

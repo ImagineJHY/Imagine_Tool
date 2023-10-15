@@ -152,6 +152,60 @@ src/Logger.cpp.s:
 	cd /home/imagine/MIT6824/Imagine_Tool/build && $(MAKE) -f Imagine_Log/CMakeFiles/imagine_log.dir/build.make Imagine_Log/CMakeFiles/imagine_log.dir/src/Logger.cpp.s
 .PHONY : src/Logger.cpp.s
 
+src/NonSingletonLogger.o: src/NonSingletonLogger.cpp.o
+
+.PHONY : src/NonSingletonLogger.o
+
+# target to build an object file
+src/NonSingletonLogger.cpp.o:
+	cd /home/imagine/MIT6824/Imagine_Tool/build && $(MAKE) -f Imagine_Log/CMakeFiles/imagine_log.dir/build.make Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o
+.PHONY : src/NonSingletonLogger.cpp.o
+
+src/NonSingletonLogger.i: src/NonSingletonLogger.cpp.i
+
+.PHONY : src/NonSingletonLogger.i
+
+# target to preprocess a source file
+src/NonSingletonLogger.cpp.i:
+	cd /home/imagine/MIT6824/Imagine_Tool/build && $(MAKE) -f Imagine_Log/CMakeFiles/imagine_log.dir/build.make Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.i
+.PHONY : src/NonSingletonLogger.cpp.i
+
+src/NonSingletonLogger.s: src/NonSingletonLogger.cpp.s
+
+.PHONY : src/NonSingletonLogger.s
+
+# target to generate assembly for a file
+src/NonSingletonLogger.cpp.s:
+	cd /home/imagine/MIT6824/Imagine_Tool/build && $(MAKE) -f Imagine_Log/CMakeFiles/imagine_log.dir/build.make Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.s
+.PHONY : src/NonSingletonLogger.cpp.s
+
+src/SingletonLogger.o: src/SingletonLogger.cpp.o
+
+.PHONY : src/SingletonLogger.o
+
+# target to build an object file
+src/SingletonLogger.cpp.o:
+	cd /home/imagine/MIT6824/Imagine_Tool/build && $(MAKE) -f Imagine_Log/CMakeFiles/imagine_log.dir/build.make Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o
+.PHONY : src/SingletonLogger.cpp.o
+
+src/SingletonLogger.i: src/SingletonLogger.cpp.i
+
+.PHONY : src/SingletonLogger.i
+
+# target to preprocess a source file
+src/SingletonLogger.cpp.i:
+	cd /home/imagine/MIT6824/Imagine_Tool/build && $(MAKE) -f Imagine_Log/CMakeFiles/imagine_log.dir/build.make Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.i
+.PHONY : src/SingletonLogger.cpp.i
+
+src/SingletonLogger.s: src/SingletonLogger.cpp.s
+
+.PHONY : src/SingletonLogger.s
+
+# target to generate assembly for a file
+src/SingletonLogger.cpp.s:
+	cd /home/imagine/MIT6824/Imagine_Tool/build && $(MAKE) -f Imagine_Log/CMakeFiles/imagine_log.dir/build.make Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.s
+.PHONY : src/SingletonLogger.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +218,12 @@ help:
 	@echo "... src/Logger.o"
 	@echo "... src/Logger.i"
 	@echo "... src/Logger.s"
+	@echo "... src/NonSingletonLogger.o"
+	@echo "... src/NonSingletonLogger.i"
+	@echo "... src/NonSingletonLogger.s"
+	@echo "... src/SingletonLogger.o"
+	@echo "... src/SingletonLogger.i"
+	@echo "... src/SingletonLogger.s"
 .PHONY : help
 
 

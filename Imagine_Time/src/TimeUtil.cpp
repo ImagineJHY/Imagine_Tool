@@ -9,6 +9,8 @@
 namespace Imagine_Tool
 {
 
+long long Imagine_Tool::Timer::id_ = 0;
+
 int TimeUtil::CreateTimer()
 {
     int timer_fd = timerfd_create(CLOCK_MONOTONIC, TFD_NONBLOCK | TFD_CLOEXEC);

@@ -46,6 +46,14 @@ mutex
 stdarg.h
 -
 
+../Imagine_Log/include/Imagine_Log/NonSingletonLogger.h
+Imagine_Log/Logger.h
+../Imagine_Log/include/Imagine_Log/Imagine_Log/Logger.h
+
+../Imagine_Log/include/Imagine_Log/SingletonLogger.h
+Imagine_Log/Logger.h
+../Imagine_Log/include/Imagine_Log/Imagine_Log/Logger.h
+
 ../Imagine_Log/include/Imagine_Log/common_definition.h
 
 ../Imagine_Time/include/Imagine_Time/TimeStamp.h
@@ -431,4 +439,12 @@ fcntl.h
 -
 stdarg.h
 -
+
+/home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/NonSingletonLogger.cpp
+Imagine_Log/NonSingletonLogger.h
+/home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/Imagine_Log/NonSingletonLogger.h
+
+/home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/SingletonLogger.cpp
+Imagine_Log/SingletonLogger.h
+/home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/Imagine_Log/SingletonLogger.h
 

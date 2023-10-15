@@ -81,19 +81,71 @@ Imagine_Log/CMakeFiles/imagine_log.dir/src/Logger.cpp.o.provides: Imagine_Log/CM
 Imagine_Log/CMakeFiles/imagine_log.dir/src/Logger.cpp.o.provides.build: Imagine_Log/CMakeFiles/imagine_log.dir/src/Logger.cpp.o
 
 
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: Imagine_Log/CMakeFiles/imagine_log.dir/flags.make
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: ../Imagine_Log/src/NonSingletonLogger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/imagine/MIT6824/Imagine_Tool/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o"
+	cd /home/imagine/MIT6824/Imagine_Tool/build/Imagine_Log && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o -c /home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/NonSingletonLogger.cpp
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.i"
+	cd /home/imagine/MIT6824/Imagine_Tool/build/Imagine_Log && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/NonSingletonLogger.cpp > CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.i
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.s"
+	cd /home/imagine/MIT6824/Imagine_Tool/build/Imagine_Log && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/NonSingletonLogger.cpp -o CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.s
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o.requires:
+
+.PHONY : Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o.requires
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o.provides: Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o.requires
+	$(MAKE) -f Imagine_Log/CMakeFiles/imagine_log.dir/build.make Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o.provides.build
+.PHONY : Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o.provides
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o.provides.build: Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o
+
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: Imagine_Log/CMakeFiles/imagine_log.dir/flags.make
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: ../Imagine_Log/src/SingletonLogger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/imagine/MIT6824/Imagine_Tool/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o"
+	cd /home/imagine/MIT6824/Imagine_Tool/build/Imagine_Log && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o -c /home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/SingletonLogger.cpp
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.i"
+	cd /home/imagine/MIT6824/Imagine_Tool/build/Imagine_Log && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/SingletonLogger.cpp > CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.i
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.s"
+	cd /home/imagine/MIT6824/Imagine_Tool/build/Imagine_Log && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/SingletonLogger.cpp -o CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.s
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o.requires:
+
+.PHONY : Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o.requires
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o.provides: Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o.requires
+	$(MAKE) -f Imagine_Log/CMakeFiles/imagine_log.dir/build.make Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o.provides.build
+.PHONY : Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o.provides
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o.provides.build: Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o
+
+
 # Object files for target imagine_log
 imagine_log_OBJECTS = \
-"CMakeFiles/imagine_log.dir/src/Logger.cpp.o"
+"CMakeFiles/imagine_log.dir/src/Logger.cpp.o" \
+"CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o" \
+"CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o"
 
 # External object files for target imagine_log
 imagine_log_EXTERNAL_OBJECTS =
 
 ../lib/libimagine_log.so: Imagine_Log/CMakeFiles/imagine_log.dir/src/Logger.cpp.o
+../lib/libimagine_log.so: Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o
+../lib/libimagine_log.so: Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o
 ../lib/libimagine_log.so: Imagine_Log/CMakeFiles/imagine_log.dir/build.make
 ../lib/libimagine_log.so: ../lib/libyaml-cpp.a
 ../lib/libimagine_log.so: ../lib/libimagine_time.so
 ../lib/libimagine_log.so: Imagine_Log/CMakeFiles/imagine_log.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/imagine/MIT6824/Imagine_Tool/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../../lib/libimagine_log.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/imagine/MIT6824/Imagine_Tool/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library ../../lib/libimagine_log.so"
 	cd /home/imagine/MIT6824/Imagine_Tool/build/Imagine_Log && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/imagine_log.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -102,6 +154,8 @@ Imagine_Log/CMakeFiles/imagine_log.dir/build: ../lib/libimagine_log.so
 .PHONY : Imagine_Log/CMakeFiles/imagine_log.dir/build
 
 Imagine_Log/CMakeFiles/imagine_log.dir/requires: Imagine_Log/CMakeFiles/imagine_log.dir/src/Logger.cpp.o.requires
+Imagine_Log/CMakeFiles/imagine_log.dir/requires: Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o.requires
+Imagine_Log/CMakeFiles/imagine_log.dir/requires: Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o.requires
 
 .PHONY : Imagine_Log/CMakeFiles/imagine_log.dir/requires
 

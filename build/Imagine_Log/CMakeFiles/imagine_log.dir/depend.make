@@ -42,3 +42,25 @@ Imagine_Log/CMakeFiles/imagine_log.dir/src/Logger.cpp.o: ../thirdparty/Imagine_S
 Imagine_Log/CMakeFiles/imagine_log.dir/src/Logger.cpp.o: ../thirdparty/Imagine_System/worker/yaml-cpp/include/yaml-cpp/yaml.h
 Imagine_Log/CMakeFiles/imagine_log.dir/src/Logger.cpp.o: ../Imagine_Log/src/Logger.cpp
 
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/ConsoleAppender.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/FileAppender.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/LogAppender.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/Logger.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/NonSingletonLogger.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/common_definition.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: ../Imagine_Time/include/Imagine_Time/TimeStamp.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: ../Imagine_Time/include/Imagine_Time/TimeUtil.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: ../Imagine_Time/include/Imagine_Time/Timer.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/NonSingletonLogger.cpp.o: ../Imagine_Log/src/NonSingletonLogger.cpp
+
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/ConsoleAppender.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/FileAppender.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/LogAppender.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/Logger.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/SingletonLogger.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: ../Imagine_Log/include/Imagine_Log/common_definition.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: ../Imagine_Time/include/Imagine_Time/TimeStamp.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: ../Imagine_Time/include/Imagine_Time/TimeUtil.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: ../Imagine_Time/include/Imagine_Time/Timer.h
+Imagine_Log/CMakeFiles/imagine_log.dir/src/SingletonLogger.cpp.o: ../Imagine_Log/src/SingletonLogger.cpp
+

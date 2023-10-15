@@ -137,6 +137,19 @@ init/fast:
 .PHONY : init/fast
 
 #=============================================================================
+# Target rules for targets named imagine_tool
+
+# Build rule for target.
+imagine_tool: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 imagine_tool
+.PHONY : imagine_tool
+
+# fast build rule for target.
+imagine_tool/fast:
+	$(MAKE) -f CMakeFiles/imagine_tool.dir/build.make CMakeFiles/imagine_tool.dir/build
+.PHONY : imagine_tool/fast
+
+#=============================================================================
 # Target rules for targets named prepare
 
 # Build rule for target.
@@ -666,6 +679,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... build"
 	@echo "... init"
+	@echo "... imagine_tool"
 	@echo "... prepare"
 	@echo "... prepare_thirdparty"
 	@echo "... prepare_submodule"

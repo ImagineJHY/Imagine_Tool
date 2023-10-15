@@ -48,88 +48,23 @@ CMAKE_SOURCE_DIR = /home/imagine/MIT6824/Imagine_Tool
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/imagine/MIT6824/Imagine_Tool/build
 
-# Include any dependencies generated for this target.
-include CMakeFiles/imagine_tool.dir/depend.make
+# Utility rule file for imagine_tool.
 
 # Include the progress variables for this target.
 include CMakeFiles/imagine_tool.dir/progress.make
 
-# Include the compile flags for this target's objects.
-include CMakeFiles/imagine_tool.dir/flags.make
+CMakeFiles/imagine_tool:
+	cd /home/imagine/MIT6824/Imagine_Tool && echo [Constructing\ LIB][Imagine\ Tool]:\ Starting\ Imagine_Tool\ target\ build\ building...
 
-CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o: CMakeFiles/imagine_tool.dir/flags.make
-CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o: ../Imagine_Log/src/Logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/imagine/MIT6824/Imagine_Tool/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o -c /home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/Logger.cpp
+imagine_tool: CMakeFiles/imagine_tool
+imagine_tool: CMakeFiles/imagine_tool.dir/build.make
 
-CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/Logger.cpp > CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.i
-
-CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/Logger.cpp -o CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.s
-
-CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o.requires:
-
-.PHONY : CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o.requires
-
-CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o.provides: CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o.requires
-	$(MAKE) -f CMakeFiles/imagine_tool.dir/build.make CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o.provides.build
-.PHONY : CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o.provides
-
-CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o.provides.build: CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o
-
-
-CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o: CMakeFiles/imagine_tool.dir/flags.make
-CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o: ../Imagine_Time/src/TimeUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/imagine/MIT6824/Imagine_Tool/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o -c /home/imagine/MIT6824/Imagine_Tool/Imagine_Time/src/TimeUtil.cpp
-
-CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/imagine/MIT6824/Imagine_Tool/Imagine_Time/src/TimeUtil.cpp > CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.i
-
-CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/imagine/MIT6824/Imagine_Tool/Imagine_Time/src/TimeUtil.cpp -o CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.s
-
-CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o.requires:
-
-.PHONY : CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o.requires
-
-CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o.provides: CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o.requires
-	$(MAKE) -f CMakeFiles/imagine_tool.dir/build.make CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o.provides.build
-.PHONY : CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o.provides
-
-CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o.provides.build: CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o
-
-
-# Object files for target imagine_tool
-imagine_tool_OBJECTS = \
-"CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o" \
-"CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o"
-
-# External object files for target imagine_tool
-imagine_tool_EXTERNAL_OBJECTS =
-
-../lib/libimagine_tool.so: CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o
-../lib/libimagine_tool.so: CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o
-../lib/libimagine_tool.so: CMakeFiles/imagine_tool.dir/build.make
-../lib/libimagine_tool.so: ../lib/libyaml-cpp.a
-../lib/libimagine_tool.so: CMakeFiles/imagine_tool.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/imagine/MIT6824/Imagine_Tool/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library ../lib/libimagine_tool.so"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/imagine_tool.dir/link.txt --verbose=$(VERBOSE)
+.PHONY : imagine_tool
 
 # Rule to build all files generated by this target.
-CMakeFiles/imagine_tool.dir/build: ../lib/libimagine_tool.so
+CMakeFiles/imagine_tool.dir/build: imagine_tool
 
 .PHONY : CMakeFiles/imagine_tool.dir/build
-
-CMakeFiles/imagine_tool.dir/requires: CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o.requires
-CMakeFiles/imagine_tool.dir/requires: CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o.requires
-
-.PHONY : CMakeFiles/imagine_tool.dir/requires
 
 CMakeFiles/imagine_tool.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/imagine_tool.dir/cmake_clean.cmake
