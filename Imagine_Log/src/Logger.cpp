@@ -14,10 +14,10 @@ Logger*& Logger::GetInstance()
     return logger;
 }
 
-void Logger::SetInstance(Logger* logger)
+void Logger::SetInstance(Logger* logger_instance)
 {
     Logger*& logger = GetInstance();
-    logger = logger;
+    logger = logger_instance;
 }
 
 bool Logger::Init(std::string profile_path)

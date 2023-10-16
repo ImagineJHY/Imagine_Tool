@@ -28,7 +28,7 @@ class Logger
  public:
   static Logger*& GetInstance();
 
-  static void SetInstance(Logger* logger);
+  static void SetInstance(Logger* logger_instance);
 
  public:
    Logger(): async_write_(false){};
