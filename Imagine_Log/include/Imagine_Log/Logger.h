@@ -26,6 +26,11 @@ class Logger
    };
 
  public:
+  static Logger*& GetInstance();
+
+  static void SetInstance(Logger* logger);
+
+ public:
    Logger(): async_write_(false){};
 
    Logger(const Logger& logger){};

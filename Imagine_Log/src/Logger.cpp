@@ -8,6 +8,18 @@ namespace Imagine_Tool
     
 std::mutex Logger::lock_;
 
+Logger*& Logger::GetInstance()
+{
+    static Logger* logger;
+    return logger;
+}
+
+void Logger::SetInstance(Logger* logger)
+{
+    Logger*& logger = GetInstance();
+    logger = logger;
+}
+
 bool Logger::Init(std::string profile_path)
 {
     if (profile_path == "") {

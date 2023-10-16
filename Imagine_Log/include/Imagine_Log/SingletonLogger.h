@@ -13,6 +13,9 @@ class SingletonLogger : public Logger
 
     static bool DestroyInstance();
 
+private:
+    static void SetInstance(Logger* logger){};
+
  public:
     SingletonLogger();
 
