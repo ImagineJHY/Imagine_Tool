@@ -37,7 +37,9 @@ class Logger
 
    virtual ~Logger(){};
 
-   bool Init(std::string profile_path = "");
+   virtual bool Init(std::string profile_path = "");
+
+   bool Init(YAML::Node config);
 
    Logger* Log(LogLevel level, const char* format, ...);
 

@@ -39,6 +39,8 @@ FileAppender.h
 ../Imagine_Log/include/Imagine_Log/FileAppender.h
 Imagine_Time/Timer.h
 ../Imagine_Log/include/Imagine_Log/Imagine_Time/Timer.h
+yaml-cpp/yaml.h
+../Imagine_Log/include/Imagine_Log/yaml-cpp/yaml.h
 string
 -
 mutex
@@ -433,8 +435,6 @@ yaml-cpp/node/emit.h
 /home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/Logger.cpp
 Imagine_Log/Logger.h
 /home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/Imagine_Log/Logger.h
-yaml-cpp/yaml.h
-/home/imagine/MIT6824/Imagine_Tool/Imagine_Log/src/yaml-cpp/yaml.h
 fcntl.h
 -
 stdarg.h

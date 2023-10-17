@@ -270,12 +270,6 @@ IMAGINE_LOG_BINARY_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/build/Imagine_L
 IMAGINE_LOG_SOURCE_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/Imagine_Log
 
 //Value Computed by CMake
-IMAGINE_MUDUO_BINARY_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/build
-
-//Value Computed by CMake
-IMAGINE_MUDUO_SOURCE_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool
-
-//Value Computed by CMake
 IMAGINE_SYSTEM_BINARY_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/build/thirdparty/Imagine_System
 
 //Value Computed by CMake
@@ -351,14 +345,8 @@ YAML_CPP_SOURCE_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/thirdparty/Imagine
 //Dependencies for the target
 imagine_log_LIB_DEPENDS:STATIC=general;yaml-cpp;general;imagine_time;
 
-//Dependencies for the target
-imagine_muduo_LIB_DEPENDS:STATIC=general;pthread;
-
 //Dependencies for target
 imagine_time_LIB_DEPENDS:STATIC=
-
-//Dependencies for the target
-imagine_tool_LIB_DEPENDS:STATIC=general;yaml-cpp;
 
 //Dependencies for target
 yaml-cpp_LIB_DEPENDS:STATIC=

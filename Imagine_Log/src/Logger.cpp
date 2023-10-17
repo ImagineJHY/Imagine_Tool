@@ -27,6 +27,13 @@ bool Logger::Init(std::string profile_path)
     }
 
     YAML::Node config = YAML::LoadFile(profile_path);
+    Init(config);
+
+    return true;
+}
+
+bool Logger::Init(YAML::Node config)
+{
     log_name_ = config["name"].as<std::string>();
     log_path_ = config["path"].as<std::string>();
     async_write_ = config["async"].as<bool>();

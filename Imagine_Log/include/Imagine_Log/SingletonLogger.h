@@ -20,6 +20,9 @@ private:
     SingletonLogger();
 
     ~SingletonLogger() {};
+
+   using Logger::Init;
+    bool Init(std::string profile_path);
  
  private:
   static Logger* logger_;

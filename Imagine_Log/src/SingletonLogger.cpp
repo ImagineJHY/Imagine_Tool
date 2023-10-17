@@ -30,4 +30,17 @@ bool SingletonLogger::DestroyInstance()
     return false;
 }
 
+bool SingletonLogger::Init(std::string profile_path)
+{
+    static bool is_init = false;
+    if (is_init) {
+        return true;
+    }
+    is_init = true;
+    YAML::Node config = YAML::LoadFile(profile_path);
+    Init(config);
+
+    return true;
+}
+
 } // namesapce Imagine_Tool
