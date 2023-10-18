@@ -1,14 +1,12 @@
 ### CMake ###
-*/build/CMakeFiles/
-*/build/thirdparty/
-*/build/CMakeCache.txt
-*/build/cmake_install.cmake
-*/build
+build/
+build/cmake_install.cmake
+build/CMakeCache.txt
 !build/Makefile
 
 
 # thirdparty
-/thirdparty
+thirdparty/
 !CMakeLists.txt
 
 # lib

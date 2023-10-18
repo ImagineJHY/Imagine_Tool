@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -g -std=c++11  -shared -Wl,-soname,libimagine_tool.so -o ../lib/libimagine_tool.so CMakeFiles/imagine_tool.dir/Imagine_Log/src/Logger.cpp.o CMakeFiles/imagine_tool.dir/Imagine_Time/src/TimeUtil.cpp.o ../lib/libyaml-cpp.a 
