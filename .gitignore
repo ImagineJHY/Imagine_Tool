@@ -6,7 +6,7 @@ build/CMakeCache.txt
 
 
 # thirdparty
-thirdparty/
+thirdparty/*
 !CMakeLists.txt
 
 # lib
