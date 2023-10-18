@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/imagine/MIT6824/Imagine_Tool/build
 include CMakeFiles/init.dir/progress.make
 
 CMakeFiles/init:
-	cd /home/imagine/MIT6824/Imagine_Tool && python3 init.py echo [Constructing\ LIB][Imagine\ Tool]:\ Starting\ Imagine_Tool\ lib\ target\ init\ building...
+	cd /home/imagine/MIT6824/Imagine_Tool && echo [Constructing\ LIB][Imagine\ Tool]:\ Starting\ Imagine_Tool\ lib\ target\ init\ building...
 
 init: CMakeFiles/init
 init: CMakeFiles/init.dir/build.make

@@ -18,13 +18,13 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../Imagine_Log/include"
-  "../thirdparty/Imagine_System/worker/yaml-cpp/include"
+  "../thirdparty/yaml-cpp/include"
   "../Imagine_Time/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/imagine/MIT6824/Imagine_Tool/build/thirdparty/Imagine_System/worker/yaml-cpp/CMakeFiles/yaml-cpp.dir/DependInfo.cmake"
+  "/home/imagine/MIT6824/Imagine_Tool/build/thirdparty/yaml-cpp/CMakeFiles/yaml-cpp.dir/DependInfo.cmake"
   "/home/imagine/MIT6824/Imagine_Tool/build/Imagine_Time/CMakeFiles/imagine_time.dir/DependInfo.cmake"
   )
 

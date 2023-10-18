@@ -270,12 +270,6 @@ IMAGINE_LOG_BINARY_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/build/Imagine_L
 IMAGINE_LOG_SOURCE_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/Imagine_Log
 
 //Value Computed by CMake
-IMAGINE_SYSTEM_BINARY_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/build/thirdparty/Imagine_System
-
-//Value Computed by CMake
-IMAGINE_SYSTEM_SOURCE_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/thirdparty/Imagine_System
-
-//Value Computed by CMake
 IMAGINE_TIME_BINARY_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/build/Imagine_Time
 
 //Value Computed by CMake
@@ -286,6 +280,12 @@ IMAGINE_TOOL_BINARY_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/build
 
 //Value Computed by CMake
 IMAGINE_TOOL_SOURCE_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool
+
+//Value Computed by CMake
+IMAGINE_TOOL_THIRDPARTY_BINARY_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/build/thirdparty
+
+//Value Computed by CMake
+IMAGINE_TOOL_THIRDPARTY_SOURCE_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/thirdparty
 
 //Command to build the project
 MAKECOMMAND:STRING=/usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
@@ -319,7 +319,7 @@ SVNCOMMAND:FILEPATH=SVNCOMMAND-NOTFOUND
 YAML_BUILD_SHARED_LIBS:BOOL=OFF
 
 //Value Computed by CMake
-YAML_CPP_BINARY_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/build/thirdparty/Imagine_System/worker/yaml-cpp
+YAML_CPP_BINARY_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/build/thirdparty/yaml-cpp
 
 //Enable yaml-cpp contrib in library
 YAML_CPP_BUILD_CONTRIB:BOOL=ON
@@ -340,7 +340,7 @@ YAML_CPP_INSTALL:BOOL=OFF
 YAML_CPP_INSTALL_CMAKEDIR:STRING=lib/cmake/yaml-cpp
 
 //Value Computed by CMake
-YAML_CPP_SOURCE_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/thirdparty/Imagine_System/worker/yaml-cpp
+YAML_CPP_SOURCE_DIR:STATIC=/home/imagine/MIT6824/Imagine_Tool/thirdparty/yaml-cpp
 
 //Dependencies for the target
 imagine_log_LIB_DEPENDS:STATIC=general;yaml-cpp;general;imagine_time;

@@ -3,10 +3,13 @@
 */build/thirdparty/
 */build/CMakeCache.txt
 */build/cmake_install.cmake
+*/build
+!build/Makefile
 
 
 # thirdparty
 /thirdparty
+!CMakeLists.txt
 
 # lib
 *.bak

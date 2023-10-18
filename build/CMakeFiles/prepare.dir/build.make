@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/imagine/MIT6824/Imagine_Tool/build
 include CMakeFiles/prepare.dir/progress.make
 
 CMakeFiles/prepare:
-	cd /home/imagine/MIT6824/Imagine_Tool && echo [Constructing\ LIB][Imagine\ Tool]:\ thirdparty\ Imagine_System\ exists,\ Starting\ Imagine_Tool\ lib\ target\ prepare\ building...
+	cd /home/imagine/MIT6824/Imagine_Tool && echo [Constructing\ LIB][Imagine\ Tool]:\ Starting\ Imagine_Tool\ lib\ target\ preparing...
 
 prepare: CMakeFiles/prepare
 prepare: CMakeFiles/prepare.dir/build.make

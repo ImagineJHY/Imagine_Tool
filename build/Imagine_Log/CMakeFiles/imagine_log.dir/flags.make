@@ -6,5 +6,5 @@ CXX_FLAGS =  -g -std=c++11 -g -std=c++11 -fPIC
 
 CXX_DEFINES = -DYAML_CPP_STATIC_DEFINE -Dimagine_log_EXPORTS
 
-CXX_INCLUDES = -I/home/imagine/MIT6824/Imagine_Tool/Imagine_Log/include -I/home/imagine/MIT6824/Imagine_Tool/thirdparty/Imagine_System/worker/yaml-cpp/include -I/home/imagine/MIT6824/Imagine_Tool/Imagine_Time/include 
+CXX_INCLUDES = -I/home/imagine/MIT6824/Imagine_Tool/Imagine_Log/include -I/home/imagine/MIT6824/Imagine_Tool/thirdparty/yaml-cpp/include -I/home/imagine/MIT6824/Imagine_Tool/Imagine_Time/include 
 

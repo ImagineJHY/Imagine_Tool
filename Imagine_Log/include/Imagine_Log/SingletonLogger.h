@@ -1,7 +1,7 @@
 #ifndef IMAGINE_TOOL_SINGLETONLOGGER_H
 #define IMAGINE_TOOL_SINGLETONLOGGER_H
 
-#include "Imagine_Log/Logger.h"
+#include "Logger.h"
 
 namespace Imagine_Tool
 {

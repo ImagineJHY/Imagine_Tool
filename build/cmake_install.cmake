@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/imagine/MIT6824/Imagine_Tool/build/thirdparty/Imagine_System/cmake_install.cmake")
+  include("/home/imagine/MIT6824/Imagine_Tool/build/thirdparty/cmake_install.cmake")
   include("/home/imagine/MIT6824/Imagine_Tool/build/Imagine_Time/cmake_install.cmake")
   include("/home/imagine/MIT6824/Imagine_Tool/build/Imagine_Log/cmake_install.cmake")
 
