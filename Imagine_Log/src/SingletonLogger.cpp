@@ -10,7 +10,7 @@ Logger* SingletonLogger::GetInstance()
     if (logger_ == nullptr) {
         std::unique_lock<std::mutex> lock(lock_);
         if (logger_ == nullptr) {
-            logger_ = new Logger();
+            logger_ = new SingletonLogger();
         }
     }
 
