@@ -21,8 +21,9 @@ private:
 
     ~SingletonLogger() {};
 
-   using Logger::Init;
     bool Init(std::string profile_path);
+
+    bool Init(YAML::Node config);
  
  private:
   static Logger* logger_;

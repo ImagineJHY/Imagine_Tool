@@ -43,4 +43,16 @@ bool SingletonLogger::Init(std::string profile_path)
     return true;
 }
 
+bool SingletonLogger::Init(YAML::Node config)
+{
+    static bool is_init = false;
+    if(is_init) {
+        return true;
+    }
+    is_init = true;
+    Logger::Init(config);
+
+    return true;
+}
+
 } // namesapce Imagine_Tool
