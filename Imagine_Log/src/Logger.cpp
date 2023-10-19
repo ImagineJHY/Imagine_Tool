@@ -34,12 +34,12 @@ bool Logger::Init(std::string profile_path)
 
 bool Logger::Init(YAML::Node config)
 {
-    log_name_ = config["name"].as<std::string>();
-    log_path_ = config["path"].as<std::string>();
-    async_write_ = config["async"].as<bool>();
-    log_title_ = config["title"].as<std::string>();
-    time_stamp_ = config["timestamp"].as<bool>();
-    max_log_size_ = config["size"].as<size_t>();
+    log_name_ = config["log_name"].as<std::string>();
+    log_path_ = config["log_path"].as<std::string>();
+    async_write_ = config["async_log"].as<bool>();
+    log_title_ = config["log_title"].as<std::string>();
+    time_stamp_ = config["log_with_timestamp"].as<bool>();
+    max_log_size_ = config["max_log_file_size"].as<size_t>();
 
     if (async_write_) {
 
