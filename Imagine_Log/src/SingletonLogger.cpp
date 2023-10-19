@@ -46,7 +46,7 @@ bool SingletonLogger::Init(std::string profile_path)
 bool SingletonLogger::Init(YAML::Node config)
 {
     static bool is_init = false;
-    if(is_init) {
+    if (is_init) {
         return true;
     }
     is_init = true;
