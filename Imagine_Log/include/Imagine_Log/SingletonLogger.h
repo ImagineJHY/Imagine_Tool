@@ -17,7 +17,7 @@ private:
     static void SetInstance(Logger* logger){};
 
  public:
-    SingletonLogger();
+    SingletonLogger() {};
 
     ~SingletonLogger() {};
 
