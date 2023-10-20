@@ -3,10 +3,10 @@
 all: clean init prepare build
 
 init:
-	cd build && make init
+	python3 init.py
 prepare:
-	cd build && cmake .. && make prepare
+	python3 init.py
 build:
-	cd build && cmake .. && make build
+	cd build && cmake .. && make imagine_tool
 clean:
 	cd build && make clean
