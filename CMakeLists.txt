@@ -7,14 +7,18 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g  -std=c++11")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11")
 
 message("[Constructing LIB][Imagine Tool]: Starting Imagine_Tool lib building, lib name is ${PROJECT_NAME}...")
-set(TARGET_LIB "Imagine_Tool")
-set(IS_MAKE_PROJECT false)
-set(IMAGINE_THIRDPARTY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty)
-set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/thirdparty)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Imagine_Time)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Imagine_Log)
+if(NOT DEFINED IMAGINE_TARGET_LIB)
+    set(TARGET_LIB "Imagine_Tool")
+
+    set(IS_MAKE_PROJECT false)
+    set(IMAGINE_THIRDPARTY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty)
+    set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/thirdparty)
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Imagine_Time)
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Imagine_Log)
+endif()
 
 add_custom_target(
     imagine_tool
