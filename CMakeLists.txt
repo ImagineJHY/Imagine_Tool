@@ -6,13 +6,12 @@ message("[Imagine Tool]: Starting Imagine_Tool lib building, lib name is ${PROJE
 if(NOT DEFINED IMAGINE_TARGET_LIB)
 
     message("[Imagine Tool]: IMAGINE_TARGET_LIB Is Not Defined")
+    set(IMAGINE_TARGET_LIB "Imagine_Tool")
 
     # set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g  -std=c++11 -Wall -Werror")
     # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11 -Wall -Werror")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g  -std=c++11")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++11")
-
-    set(IMAGINE_TARGET_LIB "Imagine_Tool")
 
     set(IS_MAKE_PROJECT false)
     set(IMAGINE_THIRDPARTY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty)
