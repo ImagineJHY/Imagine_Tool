@@ -4,6 +4,8 @@
 namespace Imagine_Tool
 {
 
+#define  LOG_ENDDING_TAG "\r\n"
+
 #define LOG_DEBUG(LOG_MESSAGE...) Imagine_Tool::SingletonLogger::GetInstance()->Log(Imagine_Tool::Logger::LogLevel::Debug, LOG_MESSAGE)
 #define LOG_WARN(LOG_MESSAGE...) Imagine_Tool::SingletonLogger::GetInstance()->Log(Imagine_Tool::Logger::LogLevel::Warn, LOG_MESSAGE)
 #define LOG_INFO(LOG_MESSAGE...) Imagine_Tool::SingletonLogger::GetInstance()->Log(Imagine_Tool::Logger::LogLevel::Info, LOG_MESSAGE)

@@ -47,7 +47,7 @@ class FileAppender : public LogAppender
                 throw std::exception();
             }
         }
-        write(open_file_fd_, (str + "\n").c_str(), str.size() + 1);
+        write(open_file_fd_, (str + LOG_ENDDING_TAG).c_str(), str.size() + 1);
 
         return true;
     }
