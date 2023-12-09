@@ -5,6 +5,8 @@
 #include "TimeUtil.h"
 #include "common_definition.h"
 
+#include <mutex>
+
 namespace Imagine_Tool
 {
 
@@ -12,7 +14,12 @@ class Timer
 {
  public:
     Timer(const TimeStamp &call_time, const TimerCallback &timer_callback, double interval = 0)
-        : call_time_(call_time), timer_callback_(timer_callback), interval_(interval), repeat_(interval > 0.0), timer_id_(Timer::id_++), alive_(true) {}
+        : call_time_(call_time), timer_callback_(timer_callback), interval_(interval), repeat_(interval > 0.0), alive_(true) 
+    {
+        std::unique_lock<std::mutex> lock(Timer::lock_);
+        Timer::id_++;
+        timer_id_ = Timer::id_;
+    }
 
     ~Timer(){};
 
@@ -49,6 +56,7 @@ class Timer
 
  private:
     static long long id_;
+    static std::mutex lock_;
 
  private:
     TimeStamp call_time_;           // 记录绝对时间,微秒为单位
@@ -56,7 +64,7 @@ class Timer
     const double interval_;         // 记录时间间隔,秒为单位
     bool repeat_;                   // 是否重复定时
 
-    const long long timer_id_;
+    long long timer_id_;
     bool alive_ = true;
 };
 
