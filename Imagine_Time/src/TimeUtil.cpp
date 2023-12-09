@@ -9,7 +9,8 @@
 namespace Imagine_Tool
 {
 
-long long Imagine_Tool::Timer::id_ = 0;
+long long Timer::id_ = 0;
+std::mutex Timer::lock_;
 
 int TimeUtil::CreateTimer()
 {
