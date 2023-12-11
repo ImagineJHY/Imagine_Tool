@@ -7,19 +7,23 @@
 namespace Imagine_Tool
 {
 
+namespace Imagine_Log
+{
+
 class LogAppender
 {
  public:
-    LogAppender(){};
+    LogAppender();
 
-    virtual ~LogAppender(){};
+    virtual ~LogAppender();
 
-    virtual bool WriteLog(std::string str) = 0;
+    virtual LogAppender* WriteLog(const std::string& str) = 0;
 
  protected:
     std::mutex lock_;
 };
 
+} // namespace Imagine_Log
 
 } // namespace Imagine_Tool
 

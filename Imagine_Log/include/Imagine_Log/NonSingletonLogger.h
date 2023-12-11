@@ -6,14 +6,19 @@
 namespace Imagine_Tool
 {
 
+namespace Imagine_Log
+{
+
 class NonSingletonLogger : public Logger
 {
 
  public:
-    NonSingletonLogger(){};
+    NonSingletonLogger();
 
-    ~NonSingletonLogger(){};
+    ~NonSingletonLogger();
 };
+
+} // namespace Imagine_Log
 
 } // namespace Imagine_Tool
 

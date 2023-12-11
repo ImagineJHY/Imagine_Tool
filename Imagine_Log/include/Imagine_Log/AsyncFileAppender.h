@@ -6,6 +6,9 @@
 namespace Imagine_Tool
 {
 
+namespace Imagine_Log
+{
+
 class AsyncFileAppender : public LogAppender
 {
  public:
@@ -13,8 +16,10 @@ class AsyncFileAppender : public LogAppender
 
     ~AsyncFileAppender();
 
-    bool WriteLog(std::string str);
+    LogAppender* WriteLog(const std::string& str) = 0;
 };
+
+} // namespace Imagine_Log
 
 } // namespace Imagine_Tool
 

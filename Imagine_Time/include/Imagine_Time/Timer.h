@@ -1,72 +1,53 @@
 #ifndef IMAGINE_TOOL_TIMER_H
 #define IMAGINE_TOOL_TIMER_H
 
-#include "TimeStamp.h"
-#include "TimeUtil.h"
-#include "common_definition.h"
+#include "common_typename.h"
 
 #include <mutex>
+#include <functional>
 
 namespace Imagine_Tool
 {
 
+namespace Imagine_Time
+{
+
+class TimeStamp;
+
 class Timer
 {
  public:
-    Timer(const TimeStamp &call_time, const TimerCallback &timer_callback, double interval = 0)
-        : call_time_(call_time), timer_callback_(timer_callback), interval_(interval), repeat_(interval > 0.0), alive_(true) 
-    {
-        std::unique_lock<std::mutex> lock(Timer::lock_);
-        Timer::id_++;
-        timer_id_ = Timer::id_;
-    }
+    Timer(const TimeStamp &call_time, const TimerCallback &timer_callback, double interval = 0);
 
-    ~Timer(){};
+    ~Timer();
 
-    void RunCallback()
-    {
-        timer_callback_();
-    }
+    const Timer* RunCallback() const;
 
-    bool ResetCallTime()
-    {
-        if (!alive_) {
-            return false;
-        }
-        if (repeat_) {
-            call_time_.SetTime(TimeUtil::MicroSecondsAddSeconds(TimeUtil::GetNow(), interval_));
-        } else {
-            return false;
-        }
+    bool ResetCallTime();
 
-        return true;
-    }
+    TimeStamp GetCallTime() const;
 
-    TimeStamp GetCallTime() const { return call_time_; }
+    Timer* Close();
 
-    bool Close()
-    {
-        alive_ = false;
-        return true;
-    }
+    long long GetTimerId() const;
 
-    long long GetTimerId() { return timer_id_; }
-
-    bool IsAlive() { return alive_; }
+    bool IsAlive() const;
 
  private:
     static long long id_;
     static std::mutex lock_;
 
  private:
-    TimeStamp call_time_;           // 记录绝对时间,微秒为单位
-    TimerCallback timer_callback_;  // 回调函数
-    const double interval_;         // 记录时间间隔,秒为单位
-    bool repeat_;                   // 是否重复定时
+    TimeStamp* call_time_;             // 记录绝对时间,微秒为单位
+    TimerCallback timer_callback_;     // 回调函数
+    const double interval_;            // 记录时间间隔,秒为单位
+    bool repeat_;                      // 是否重复定时
 
     long long timer_id_;
-    bool alive_ = true;
+    bool alive_;
 };
+
+} // namespace Imagine_Time
 
 } // namespace Imagine_Tool
 

@@ -1,45 +1,66 @@
 #include "Imagine_Log/Logger.h"
 
+#include "yaml-cpp/yaml.h"
+#include "Imagine_Time/Imagine_Time.h"
+#include "Imagine_Log/FileAppender.h"
+#include "Imagine_Log/common_definition.h"
+
 #include <fcntl.h>
-#include <stdarg.h>
 
 namespace Imagine_Tool
 {
-    
+
+namespace Imagine_Log
+{
+
 std::mutex Logger::lock_;
 
 Logger*& Logger::GetInstance()
 {
-    static Logger* logger;
+    static Logger* logger = nullptr;
+    
     return logger;
 }
 
-void Logger::SetInstance(Logger* logger_instance)
+Logger*& Logger::SetInstance(Logger*& logger_instance)
 {
     Logger*& logger = GetInstance();
     logger = logger_instance;
+
+    return logger;
 }
 
-bool Logger::Init(std::string profile_path)
+Logger::Logger(): async_write_(false)
+{
+}
+
+Logger::Logger(const Logger& logger)
+{
+}
+
+Logger::~Logger()
+{
+}
+
+Logger* Logger::Init(const std::string& profile_path)
 {
     if (profile_path == "") {
         throw std::exception();
     }
 
     YAML::Node config = YAML::LoadFile(profile_path);
-    Init(config);
 
-    return true;
+    return Init(config);
 }
 
-bool Logger::Init(YAML::Node config)
+Logger* Logger::Init(const YAML::Node& config)
 {
-    log_name_ = config["log_name"].as<std::string>();
-    log_path_ = config["log_path"].as<std::string>();
-    async_write_ = config["async_log"].as<bool>();
-    log_title_ = config["log_title"].as<std::string>();
-    time_stamp_ = config["log_with_timestamp"].as<bool>();
-    max_log_size_ = config["max_log_file_size"].as<size_t>();
+    log_name_ = config[YAML_KEYWORDS_LOG_NAME].as<std::string>();
+    log_path_ = config[YAML_KEYWORDS_LOG_PATH].as<std::string>();
+    async_write_ = config[YAML_KEYWORDS_ASYNC_LOG].as<bool>();
+    log_title_ = config[YAML_KEYWORDS_LOG_TITLE].as<std::string>();
+    time_stamp_ = config[YAML_KEYWORDS_LOG_WITH_TIMESTAMP].as<bool>();
+    max_log_size_ = config[YAML_KEYWORDS_MAX_LOG_FILE_SIZE].as<size_t>();
 
     if (async_write_) {
 
@@ -47,7 +68,7 @@ bool Logger::Init(YAML::Node config)
         appender_ = new FileAppender(log_name_, log_path_, max_log_size_);
     }
 
-    return true;
+    return this;
 }
 
 Logger* Logger::Log(LogLevel level, const char* format, ...)
@@ -62,18 +83,20 @@ Logger* Logger::Log(LogLevel level, const char* format, ...)
     return this;
 }
 
-std::string Logger::GenerateLogHeader()
+std::string Logger::GenerateLogHeader() const
 {
     std::string header;
     if (time_stamp_) {
-        header += "[" + std::to_string(NOW_MS) + "]";
+        header += LOG_KEYWORDS_LEFT_TAG + std::to_string(NOW_MS) + LOG_KEYWORDS_RIGHT_TAG;
     }
     if (log_title_ != "") {
-        header += "[" + log_title_ + "]";
+        header += LOG_KEYWORDS_LEFT_TAG + log_title_ + LOG_KEYWORDS_RIGHT_TAG;
     }
-    header += ": ";
+    header += LOG_KEYWORDS_AND_CONTENT_DIVIDER;
 
     return header;
 }
+
+} // namespace Imagine_Log
 
 } // namespace Imagine_Tool
