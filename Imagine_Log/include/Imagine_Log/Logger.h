@@ -1,16 +1,11 @@
 #ifndef IMAGINE_TOOL_LOGGER_H
 #define IMAGINE_TOOL_LOGGER_H
 
+#include "yaml-cpp/yaml.h"
+
 #include <string>
 #include <mutex>
 #include <stdarg.h>
-
-namespace YAML
-{
-
-class Node;
-
-} // namespace YAML
 
 namespace Imagine_Tool
 {

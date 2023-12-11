@@ -1,7 +1,5 @@
 #include "Imagine_Log/SingletonLogger.h"
 
-#include "yaml-cpp/yaml.h"
-
 namespace Imagine_Tool
 {
 

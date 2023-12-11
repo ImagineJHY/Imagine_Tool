@@ -1,6 +1,5 @@
 #include "Imagine_Log/Logger.h"
 
-#include "yaml-cpp/yaml.h"
 #include "Imagine_Time/Imagine_Time.h"
 #include "Imagine_Log/FileAppender.h"
 #include "Imagine_Log/common_definition.h"
