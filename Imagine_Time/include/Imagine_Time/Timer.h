@@ -5,6 +5,7 @@
 
 #include <mutex>
 #include <functional>
+#include <atomic>
 
 namespace Imagine_Tool
 {
@@ -44,7 +45,7 @@ class Timer
     bool repeat_;                      // 是否重复定时
 
     long long timer_id_;
-    bool alive_;
+    std::atomic<bool> alive_;
 };
 
 } // namespace Imagine_Time

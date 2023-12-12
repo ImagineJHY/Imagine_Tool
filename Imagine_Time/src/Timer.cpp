@@ -34,7 +34,7 @@ const Timer* Timer::RunCallback() const
 
 bool Timer::ResetCallTime()
 {
-    if (!alive_) {
+    if (!alive_.load()) {
         return false;
     }
 
@@ -54,7 +54,7 @@ TimeStamp Timer::GetCallTime() const
 
 Timer* Timer::Close()
 {
-    alive_ = false;
+    alive_.store(false);
 
     return this;
 }
@@ -66,7 +66,7 @@ long long Timer::GetTimerId() const
 
 bool Timer::IsAlive() const
 { 
-    return alive_;
+    return alive_.load();
 }
     
 } // namespace Imagine_Time
