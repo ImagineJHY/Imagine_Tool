@@ -1,5 +1,5 @@
-#ifndef IMAGINE_TOOL_TIMER_H
-#define IMAGINE_TOOL_TIMER_H
+#ifndef IMAGINE_TIME_TIMER_H
+#define IMAGINE_TIME_TIMER_H
 
 #include "common_typename.h"
 

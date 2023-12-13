@@ -1,5 +1,5 @@
-#ifndef IMAGINE_TOOL_LOGGER_H
-#define IMAGINE_TOOL_LOGGER_H
+#ifndef IMAGINE_LOG_LOGGER_H
+#define IMAGINE_LOG_LOGGER_H
 
 #include "yaml-cpp/yaml.h"
 

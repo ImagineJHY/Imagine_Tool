@@ -1,5 +1,5 @@
-#ifndef IMAGINE_TOOL_TIMESTAMP_H
-#define IMAGINE_TOOL_TIMESTAMP_H
+#ifndef IMAGINE_TIME_TIMESTAMP_H
+#define IMAGINE_TIME_TIMESTAMP_H
 
 namespace Imagine_Tool
 {

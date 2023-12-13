@@ -1,5 +1,5 @@
-#ifndef IMAGINE_TOOL_LOGAPPENDER_H
-#define IMAGINE_TOOL_LOGAPPENDER_H
+#ifndef IMAGINE_LOG_LOGAPPENDER_H
+#define IMAGINE_LOG_LOGAPPENDER_H
 
 #include <string>
 #include <mutex>

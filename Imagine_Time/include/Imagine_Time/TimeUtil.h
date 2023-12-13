@@ -1,5 +1,5 @@
-#ifndef IMAGINE_TOOL_TIMEUTIL_H
-#define IMAGINE_TOOL_TIMEUTIL_H
+#ifndef IMAGINE_TIME_TIMEUTIL_H
+#define IMAGINE_TIME_TIMEUTIL_H
 
 #include <functional>
 #include <sys/uio.h>
