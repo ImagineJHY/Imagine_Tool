@@ -1,10 +1,6 @@
-#ifndef IMAGINE_TOOL_LOGGER_H
-#define IMAGINE_TOOL_LOGGER_H
+#ifndef IMAGINE_LOG_LOGGER_H
+#define IMAGINE_LOG_LOGGER_H
 
-#include "common_definition.h"
-#include "ConsoleAppender.h"
-#include "FileAppender.h"
-#include "Imagine_Time/Timer.h"
 #include "yaml-cpp/yaml.h"
 
 #include <string>
@@ -14,10 +10,16 @@
 namespace Imagine_Tool
 {
 
+namespace Imagine_Log
+{
+
+class LogAppender;
+
 class Logger
 {
  public:
-   enum LogLevel{
+   enum LogLevel
+   {
       Debug,
       Warn,
       Info,
@@ -28,22 +30,22 @@ class Logger
  public:
   static Logger*& GetInstance();
 
-  static void SetInstance(Logger* logger_instance);
+  static Logger*& SetInstance(Logger*& logger_instance);
 
  public:
-   Logger(): async_write_(false){};
+   Logger();
 
-   Logger(const Logger& logger){};
+   Logger(const Logger& logger);
 
-   virtual ~Logger(){};
+   virtual ~Logger();
 
-   virtual bool Init(std::string profile_path = "");
+   virtual Logger* Init(const std::string& profile_path = "");
 
-   virtual bool Init(YAML::Node config);
+   virtual Logger* Init(const YAML::Node& config);
 
    Logger* Log(LogLevel level, const char* format, ...);
 
-   std::string GenerateLogHeader();
+   std::string GenerateLogHeader() const;
 
  protected:
   static std::mutex lock_;
@@ -61,6 +63,8 @@ class Logger
   char buffer_[1024 * 1024];
 };
 
-} // Imagine_Tool
+} // namespace Imagine_Log
+
+} // namespace Imagine_Tool
 
 #endif

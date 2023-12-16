@@ -1,13 +1,14 @@
-#ifndef IMAGINE_TOOL_TIMEUTIL_H
-#define IMAGINE_TOOL_TIMEUTIL_H
+#ifndef IMAGINE_TIME_TIMEUTIL_H
+#define IMAGINE_TIME_TIMEUTIL_H
 
 #include <functional>
 #include <sys/uio.h>
 #include <time.h>
 
-#include "common_definition.h"
-
 namespace Imagine_Tool
+{
+
+namespace Imagine_Time
 {
 
 class TimeStamp;
@@ -40,10 +41,12 @@ class TimeUtil
  public:
    class TimerPtrCmp
    {
-   public:
+    public:
       bool operator()(const Timer *a, const Timer *b);
    };
 };
+
+} // namespace Imagine_Time
 
 } // namespace Imagine_Tool
 

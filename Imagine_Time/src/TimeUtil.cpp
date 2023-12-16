@@ -1,4 +1,8 @@
+#include "Imagine_Time/TimeUtil.h"
+
 #include "Imagine_Time/Timer.h"
+#include "Imagine_Time/TimeStamp.h"
+#include "Imagine_Time/common_definition.h"
 
 #include <sys/time.h>
 #include <unistd.h>
@@ -9,7 +13,8 @@
 namespace Imagine_Tool
 {
 
-long long Imagine_Tool::Timer::id_ = 0;
+namespace Imagine_Time
+{
 
 int TimeUtil::CreateTimer()
 {
@@ -26,15 +31,13 @@ bool TimeUtil::ReadTimerfd(int timer_fd)
     unsigned long long num;
     int ret = read(timer_fd, &num, sizeof(num));
     if (ret != sizeof(num)) {
-        // printf("std::exception()::next time is %lld\n",TimeUtil::GetTimerfdSettingTime(timerfd_));
-        // throw std::exception();
+        printf("In lib Imagine_Time's Function of ReadTimerfd : timer_fd is %lld\n",TimeUtil::GetTimerfdSettingTime(timer_fd));
+        throw std::exception();
     }
     if (errno == EAGAIN) {
-        // printf("......................%lld.....................\n",num);
         return false;
     }
-    // printf("......................%d.....................\n",ret);
-    // printf("there are %lld clocks occured!\n",num);
+
     return true;
 }
 
@@ -50,15 +53,12 @@ struct timespec TimeUtil::GetTimespecFromNow(const TimeStamp &time)
 {
     long long micro_seconds = time.GetTime() - GetNow();
     if (micro_seconds < 0) {
-        printf("ur 2 small!\n");
+        printf("In lib Imagine_Time's Function of GetTimespecFromNow : micro_seconds too small!\n");
     }
-    // printf("micro seconds is %lld\n",micro_seconds);
     if (micro_seconds < 100) {
         micro_seconds = 100;
-        printf("too short .....................................................................................too short\n");
     }
     struct timespec time_spec;
-    // printf("Set seconds is %ld\n",new_value_.it_value.tv_sec*1000000+new_value_.it_value.tv_nsec*1000)
     time_spec.tv_sec = static_cast<time_t>(micro_seconds / ms_per_second);
     time_spec.tv_nsec = static_cast<long>((micro_seconds % ms_per_second) * 1000);
 
@@ -67,7 +67,7 @@ struct timespec TimeUtil::GetTimespecFromNow(const TimeStamp &time)
 
 void TimeUtil::SetDefaultTimerfd(const int timer_fd)
 {
-    TimeStamp time(MicroSecondsAddSeconds(GetNow(), 5.0));
+    TimeStamp time(MicroSecondsAddSeconds(GetNow(), DEFAULT_TIMER_INTERVAL));
     struct itimerspec old_value;
     struct itimerspec new_value;
     memset(&old_value, 0, sizeof(old_value));
@@ -76,7 +76,7 @@ void TimeUtil::SetDefaultTimerfd(const int timer_fd)
     // memset(&new_value,0,sizeof(new_value));
     int ret = timerfd_settime(timer_fd, 0, &new_value, &old_value);
     if (ret) {
-        printf("exception here3\n");
+        printf("In lib Imagine_Time's Function of SetDefaultTimerfd : micro_seconds too small!\n");
         throw std::exception();
     }
 }
@@ -89,9 +89,8 @@ void TimeUtil::ResetTimerfd(const int timer_fd, const TimeStamp &time)
     memset(&new_value, 0, sizeof(new_value));
     new_value.it_value = GetTimespecFromNow(time);
     int ret = timerfd_settime(timer_fd, 0, &new_value, &old_value);
-    // printf("reset timer after %lf\n",(new_value.it_value.tv_sec)+(new_value.it_value.tv_nsec/1000)*0.000001);
     if (ret) {
-        printf("exception here1\n");
+        printf("In lib Imagine_Time's Function of ResetTimerfd : ret is %d\n", ret);
         throw std::exception();
     }
 }
@@ -107,6 +106,7 @@ long long TimeUtil::GetNow()
 long long TimeUtil::MicroSecondsAddSeconds(long long time, double interval)
 {
     long long interval_us = static_cast<long long>(interval * ms_per_second);
+    
     return static_cast<long long>(time + interval_us);
 }
 
@@ -175,12 +175,14 @@ std::string TimeUtil::ToDate(long long ms)
         second++;
     }
 
-    return std::to_string(year) + "-" + std::to_string(month) + "-" + std::to_string(day) + "." + std::to_string(hour) + ":" + std::to_string(min)+ ":" + std::to_string(second) + ":" + std::to_string(ms);
+    return std::to_string(year) + SEPARATOR_OF_YEAR_AND_MONTH + std::to_string(month) + SEPARATOR_OF_MONTH_AND_DAY + std::to_string(day) + SEPARATOR_OF_DATE_AND_TIME + std::to_string(hour) + SEPARATOR_OF_HOUR_AND_MINUTE + std::to_string(min)+ SEPARATOR_OF_MINUTE_AND_SECOND + std::to_string(second) + SEPARATOR_OF_SECOND_AND_MICROSECOND + std::to_string(ms);
 }
 
 bool TimeUtil::IsLeapYear(long long year)
 {
     return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
 }
+
+} // namespace Imagine_Time
 
 } // namespace Imagine_Tool

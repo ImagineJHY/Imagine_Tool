@@ -1,29 +1,30 @@
-#ifndef IMAGINE_TOOL_TIMESTAMP_H
-#define IMAGINE_TOOL_TIMESTAMP_H
-
-#include "TimeUtil.h"
+#ifndef IMAGINE_TIME_TIMESTAMP_H
+#define IMAGINE_TIME_TIMESTAMP_H
 
 namespace Imagine_Tool
+{
+
+namespace Imagine_Time
 {
 
 class TimeStamp
 {
  public:
-    explicit TimeStamp(long long time = 0) : micro_seconds_time_(time){};
+    explicit TimeStamp(long long time = 0);
 
-    ~TimeStamp(){};
+    TimeStamp(const TimeStamp& time_stamp);
 
-    long long GetTime() const { return micro_seconds_time_; }
+    ~TimeStamp();
 
-    bool SetTime(long long time)
-    {
-        micro_seconds_time_ = time;
-        return true;
-    }
+    long long GetTime() const;
+
+    bool SetTime(long long time);
 
  private:
     long long micro_seconds_time_;
 };
+
+} // namespace Imagine_Time
 
 } // namespace Imagine_Tool
 
