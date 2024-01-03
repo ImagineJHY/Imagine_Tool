@@ -13,7 +13,7 @@ StateMachineState::StateMachineState(const std::string& state_name) : sm_(nullpt
 {
 }
 
-StateMachineState::StateMachineState(const std::string& state_name, StateMachineStateType state_type, StateMachineState* const parent_state) : sm_(nullptr), state_name_(state_name), state_type_(state_type), parent_state_(parent_state), active_(false), default_subState_(nullptr)
+StateMachineState::StateMachineState(const std::string& state_name, StateMachineState* const parent_state, StateMachineStateType state_type) : sm_(nullptr), state_name_(state_name), state_type_(state_type), parent_state_(parent_state), active_(false), default_subState_(nullptr)
 {
 }
 
