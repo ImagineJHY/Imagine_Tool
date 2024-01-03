@@ -9,11 +9,11 @@ namespace Imagine_Tool
 namespace Imagine_StateMachine
 {
 
-StateMachineState::StateMachineState(const std::string& state_name) : sm_(nullptr), state_name_(state_name), state_type_(StateMachineStateType::NornalState), parent_state_(nullptr), active_(false), default_subState_(nullptr)
+StateMachineState::StateMachineState(const std::string& state_name, const StateMachine* sm) : sm_(sm), state_name_(state_name), state_type_(StateMachineStateType::NornalState), parent_state_(nullptr), active_(false), default_subState_(nullptr)
 {
 }
 
-StateMachineState::StateMachineState(const std::string& state_name, StateMachineState* const parent_state, StateMachineStateType state_type) : sm_(nullptr), state_name_(state_name), state_type_(state_type), parent_state_(parent_state), active_(false), default_subState_(nullptr)
+StateMachineState::StateMachineState(const std::string& state_name, StateMachineState* const parent_state, const StateMachine* sm, StateMachineStateType state_type) : sm_(sm), state_name_(state_name), state_type_(state_type), parent_state_(parent_state), active_(false), default_subState_(nullptr)
 {
 }
 

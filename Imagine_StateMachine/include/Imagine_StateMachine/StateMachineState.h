@@ -26,12 +26,12 @@ friend class StateMachine;
     /**
      * @brief 创建根节点使用的构造函数
     */
-    StateMachineState(const std::string& state_name);
+    StateMachineState(const std::string& state_name, const StateMachine* sm = nullptr);
 
     /**
      * @brief 创建子节点使用的构造函数
     */
-    StateMachineState(const std::string& state_name, StateMachineState* const parent_state, StateMachineStateType state_type = StateMachineStateType::NornalState);
+    StateMachineState(const std::string& state_name, StateMachineState* const parent_state, const StateMachine* sm = nullptr, StateMachineStateType state_type = StateMachineStateType::NornalState);
     
     virtual ~StateMachineState();
 
@@ -81,7 +81,7 @@ friend class StateMachine;
 
     StateMachineState* GetParentState() const;
 
- private:
+ protected:
    const StateMachine* sm_;
 
  private:
