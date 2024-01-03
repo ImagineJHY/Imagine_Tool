@@ -2,6 +2,7 @@
 #define IMAGINE_STATEMACHINE_STATEMACHINESTATE_H
 
 #include "common_typename.h"
+#include "common_definition.h"
 
 #include <stack>
 #include <string>
