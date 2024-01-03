@@ -66,6 +66,8 @@ friend class StateMachine;
 
     bool IsActive() const;
 
+    StateMachineState* GetStatePtr(const std::string& state_name);
+
  private:
     virtual StateMachineState* onEnter() = 0;
 
@@ -80,8 +82,6 @@ friend class StateMachine;
     const StateMachineState* FindCommonAncestor(const StateMachineState* state) const;
 
     StateMachineState* GetParentState() const;
-
-    StateMachineState* GetStatePtr(const std::string& state_name);
 
  protected:
    const StateMachine* sm_;
