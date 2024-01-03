@@ -101,6 +101,23 @@ StateMachineState* StateMachine::GetRootState() const
     return root_state_;
 }
 
+StateMachine* StateMachine::AddActiveState(StateMachineState* active_state)
+{
+    active_state_.insert(std::make_pair(active_state->GetStateName(), active_state));
+
+    return this;
+}
+
+StateMachine* StateMachine::RemoveActiveState(StateMachineState* active_state)
+{
+    if (active_state_.find(active_state->GetStateName()) == active_state_.end()) {
+        throw std::exception();
+    }
+    active_state_.erase(active_state->GetStateName());
+
+    return this;
+}
+
 } // namespace Imagine_StateMachine
 
 } // namespace Imagine_Tool

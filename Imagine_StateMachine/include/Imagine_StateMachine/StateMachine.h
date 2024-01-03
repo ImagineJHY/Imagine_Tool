@@ -30,6 +30,10 @@ class StateMachine
 
     StateMachineState* GetRootState() const;
 
+    StateMachine* AddActiveState(StateMachineState* active_state);
+
+    StateMachine* RemoveActiveState(StateMachineState* active_state);
+
  private:
     StateMachineState* root_state_;
     std::unordered_map<std::string, StateMachineState*> state_map_;

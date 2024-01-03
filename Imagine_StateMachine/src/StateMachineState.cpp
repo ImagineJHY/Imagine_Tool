@@ -148,7 +148,7 @@ const StateMachineState* StateMachineState::FindCommonAncestor(const StateMachin
 StateMachineState* StateMachineState::TransitionToState(StateMachineState* new_state)
 {
     if (new_state->IsActive()) {
-        return this;
+        return this; // 当目标状态为Active, 不做任何改变(是否要退出当前状态)
     }
 
     const StateMachineState* common_ancestor_state = FindCommonAncestor(new_state);
