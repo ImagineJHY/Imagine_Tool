@@ -30,7 +30,7 @@ friend class StateMachine;
     /**
      * @brief 创建子节点使用的构造函数
     */
-    StateMachineState(const std::string& state_name, StateMachineState* const parent_state, StateMachineStateType state_type);
+    StateMachineState(const std::string& state_name, StateMachineState* const parent_state, StateMachineStateType state_type = StateMachineStateType::NornalState);
     
     virtual ~StateMachineState();
 
