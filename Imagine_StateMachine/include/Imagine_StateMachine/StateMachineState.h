@@ -84,7 +84,7 @@ friend class StateMachine;
     StateMachineState* GetParentState() const;
 
  protected:
-   const StateMachine* sm_;
+   StateMachine* sm_;
 
  private:
     const std::string state_name_;
