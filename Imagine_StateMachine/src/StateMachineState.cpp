@@ -202,6 +202,7 @@ StateMachineState* StateMachineState::Enter()
 StateMachineState* StateMachineState::Exit()
 {
     active_ = false;
+    sm_->RemoveActiveState(this);
     if (state_type_ == StateMachineStateType::RegionState) {
         parent_state_->ExitAllsubState();
     }
