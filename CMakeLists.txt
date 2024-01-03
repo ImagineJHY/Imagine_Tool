@@ -22,6 +22,7 @@ endif()
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/thirdparty)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Imagine_Time)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Imagine_Log)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Imagine_StateMachine)
 
 add_custom_target(
     imagine_tool
@@ -29,4 +30,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} # 在哪个目录下执行命令
 )
 
-add_dependencies(imagine_tool imagine_log imagine_time imagine_tool_thirdparty)
+add_dependencies(imagine_tool imagine_statemachine imagine_log imagine_time imagine_tool_thirdparty)
