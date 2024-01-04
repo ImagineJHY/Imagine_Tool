@@ -195,6 +195,9 @@ StateMachineState* StateMachineState::Enter()
 {
     active_ = true;
     onEnter();
+    if (default_subState_ != nullptr) {
+        default_subState_->Enter();
+    }
 
     return this;
 }
