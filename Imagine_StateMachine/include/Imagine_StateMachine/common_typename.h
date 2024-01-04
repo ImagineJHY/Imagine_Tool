@@ -10,8 +10,8 @@ namespace Imagine_Tool
 namespace Imagine_StateMachine
 {
 
-#define TRANSITION_TRUE_CONDITION [](StateMachineState* src, StateMachineState* tgt, StateMachineEvent evt) -> bool { return true; };
-#define ACTOR_TRUE_CONDITION [](StateMachineState* src, StateMachineEvent evt) -> bool { return true; };
+#define TRANSITION_TRUE_CONDITION [](StateMachineState* src, StateMachineState* tgt, StateMachineEvent evt) -> bool { return true; }
+#define ACTOR_TRUE_CONDITION [](StateMachineState* src, StateMachineEvent evt) -> bool { return true; }
 
 class StateMachineState;
 
