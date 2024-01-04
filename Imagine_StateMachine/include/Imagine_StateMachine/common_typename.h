@@ -10,6 +10,9 @@ namespace Imagine_Tool
 namespace Imagine_StateMachine
 {
 
+#define TRANSITION_TRUE_CONDITION [](StateMachineState*, StateMachineState*, StateMachineEvent) -> bool { return true; };
+#define ACTOR_TRUE_CONDITION [](StateMachineState*, StateMachineEvent) -> bool { return true; };
+
 class StateMachineState;
 
 using StateMachineEvent = std::string;          // event类型(默认为string)
