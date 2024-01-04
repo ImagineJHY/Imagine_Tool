@@ -66,7 +66,7 @@ friend class StateMachine;
 
     bool IsActive() const;
 
-    StateMachineState* GetStatePtr(const std::string& state_name);
+    StateMachineState* GetSubStatePtr(const std::string& state_name);
 
  private:
     virtual StateMachineState* onEnter() = 0;

@@ -225,7 +225,7 @@ StateMachineState* StateMachineState::ExitAllsubState()
     return this;
 }
 
-StateMachineState* StateMachineState::GetStatePtr(const std::string& state_name)
+StateMachineState* StateMachineState::GetSubStatePtr(const std::string& state_name)
 {
     std::unordered_map<std::string, StateMachineState*>::iterator target_state_it = subState_map_.find(state_name);
     if (target_state_it != subState_map_.end()) {
