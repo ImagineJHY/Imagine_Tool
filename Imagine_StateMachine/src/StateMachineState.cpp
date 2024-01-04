@@ -206,6 +206,11 @@ StateMachineState* StateMachineState::Exit()
     if (state_type_ == StateMachineStateType::RegionState) {
         parent_state_->ExitAllsubState();
     }
+    for (auto it = subState_map_.begin(); it != subState_map_.end(); it++) {
+        if (it->second->IsActive()) {
+            it->second->Exit();
+        }
+    }
     onExit();
 
     return this;
