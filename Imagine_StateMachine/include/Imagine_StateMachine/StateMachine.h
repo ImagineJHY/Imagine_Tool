@@ -34,6 +34,8 @@ class StateMachine
 
     StateMachine* RemoveActiveState(StateMachineState* active_state);
 
+    StateMachineState* GetStatePtr(const std::string& state_name) const;
+
  private:
     StateMachineState* root_state_;
     std::unordered_map<std::string, StateMachineState*> state_map_;

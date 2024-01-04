@@ -118,6 +118,16 @@ StateMachine* StateMachine::RemoveActiveState(StateMachineState* active_state)
     return this;
 }
 
+StateMachineState* StateMachine::GetStatePtr(const std::string& state_name) const
+{
+    auto target_state_it = state_map_.find(state_name);
+    if (target_state_it != state_map_.end()) {
+        return target_state_it->second;
+    }
+
+    return nullptr;
+}
+
 } // namespace Imagine_StateMachine
 
 } // namespace Imagine_Tool
