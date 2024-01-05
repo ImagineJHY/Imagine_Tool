@@ -30,10 +30,10 @@ StateMachineState* StateMachineState::AddSubState(StateMachineState* subState)
 
 StateMachineState* StateMachineState::SetDefaultSubState(StateMachineState* subState)
 {
-    if (state_type_ == StateMachineStateType::RegionState) {
-        throw std::exception();
-    }
-
+    // TODO : 应检查子节点是否正交
+    // if (state_type_ == StateMachineStateType::RegionState) {
+    //     throw std::exception();
+    // }
     default_subState_ = subState;
     if (subState_map_.find(subState->GetStateName()) == subState_map_.end()) {
         subState_map_.insert(std::make_pair(subState->GetStateName(), subState));
@@ -169,6 +169,13 @@ StateMachineState* StateMachineState::TransitionToState(StateMachineState* new_s
         state_queue.pop();
     }
     while (state_stack.size()) {
+        if (state_stack.top()->state_type_ == StateMachineStateType::NornalState && state_stack.top()->parent_state_ != nullptr) {
+            for (auto it = state_stack.top()->parent_state_->subState_map_.begin(); it != state_stack.top()->parent_state_->subState_map_.end(); it++) {
+                if (it->second->GetStateName() != state_stack.top()->GetStateName()) {
+                    it->second->Exit(); // 对于非正交状态, 检查亲兄弟是否全部退出
+                }
+            }
+        }
         state_stack.top()->Enter();
         state_stack.pop();
     }
@@ -193,6 +200,9 @@ StateMachineState* StateMachineState::GetParentState() const
 
 StateMachineState* StateMachineState::Enter()
 {
+    if (active_) {
+        return this;
+    }
     active_ = true;
     onEnter();
     if (default_subState_ != nullptr) {
@@ -204,15 +214,16 @@ StateMachineState* StateMachineState::Enter()
 
 StateMachineState* StateMachineState::Exit()
 {
+    if (!active_) {
+        return this;
+    }
     active_ = false;
     sm_->RemoveActiveState(this);
     if (state_type_ == StateMachineStateType::RegionState) {
         parent_state_->ExitAllsubState();
     }
     for (auto it = subState_map_.begin(); it != subState_map_.end(); it++) {
-        if (it->second->IsActive()) {
             it->second->Exit();
-        }
     }
     onExit();
 
