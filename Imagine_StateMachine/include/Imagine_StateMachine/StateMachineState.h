@@ -85,14 +85,14 @@ friend class StateMachine;
 
  protected:
    StateMachine* sm_;
+   StateMachineState* const parent_state_;
+   std::unordered_map<std::string, StateMachineState*> subState_map_;
 
  private:
     const std::string state_name_;
     const StateMachineStateType state_type_;
-    StateMachineState* const parent_state_;
     bool active_;
     StateMachineState* default_subState_;
-    std::unordered_map<std::string, StateMachineState*> subState_map_;
     std::unordered_map<StateMachineEvent, std::pair<StandardizedCallback, TransitionEventPriority>> trans_evt_cbs_;
     std::unordered_map<std::string, std::pair<StandardizedCallback, TransitionConditionPriority>> trans_cond_cbs_;
     std::unordered_map<StateMachineEvent, std::pair<StandardizedCallback, ActorEventPriority>> actor_evt_cbs_;
