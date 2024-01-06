@@ -37,7 +37,7 @@ friend class StateMachine;
 
     StateMachineState* AddSubState(StateMachineState* subState);
 
-    virtual StateMachineState* AddRegionSubState();
+    StateMachineState* AddRegionSubState();
 
     StateMachineState* SetDefaultSubState(StateMachineState* subState);
 
