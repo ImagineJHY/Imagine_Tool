@@ -68,6 +68,9 @@ friend class StateMachine;
 
     StateMachineState* GetSubStatePtr(const std::string& state_name);
 
+ protected:
+    StateMachineState* ExitAllsubState();
+
  private:
     virtual StateMachineState* onEnter() = 0;
 
@@ -76,8 +79,6 @@ friend class StateMachine;
     StateMachineState* Enter();
 
     StateMachineState* Exit();
-
-    StateMachineState* ExitAllsubState();
 
     const StateMachineState* FindCommonAncestor(const StateMachineState* state) const;
 
