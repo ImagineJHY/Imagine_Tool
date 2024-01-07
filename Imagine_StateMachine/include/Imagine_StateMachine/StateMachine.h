@@ -24,6 +24,8 @@ class StateMachine
 
     StateMachine* RegisterState(StateMachineState* state);
 
+    StateMachine* ActiveRootState() const;
+
     StateMachine* EventExecute(const StateMachineEvent& evt);
 
     StateMachine* ConditionExecute();

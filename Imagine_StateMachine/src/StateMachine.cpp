@@ -36,6 +36,11 @@ StateMachine* StateMachine::RegisterState(StateMachineState* state)
     return this;
 }
 
+StateMachine* StateMachine::ActiveRootState() const
+{
+    root_state_->Enter();
+}
+
 StateMachine* StateMachine::EventExecute(const StateMachineEvent& evt)
 {
     std::priority_queue<std::pair<StandardizedCallback, TransitionEventPriority>, std::vector<std::pair<StandardizedCallback, TransitionEventPriority>>, PriorityCmp<StandardizedCallback, TransitionEventPriority>> trans_evt_cbs;
