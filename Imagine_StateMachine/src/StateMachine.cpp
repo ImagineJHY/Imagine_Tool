@@ -26,6 +26,7 @@ StateMachine* StateMachine::RegisterState(StateMachineState* state)
         StateMachineState* temp_state = state_queue.front();
         temp_state->sm_ = this;
         state_map_.insert(std::make_pair(temp_state->GetStateName(), temp_state));
+        printf("%s\n", temp_state->GetStateName().c_str());
         for (auto it = temp_state->subState_map_.begin(); it != temp_state->subState_map_.end(); it++) {
             state_queue.push(it->second);
         }
