@@ -57,9 +57,12 @@ StateMachine* StateMachine::EventExecute(const StateMachineEvent& evt)
     }
 
     while (trans_evt_cbs.size()) {
+        printf("aaaa\n");
         if (trans_evt_cbs.top().first()) {
+            printf("aaaa\n");
             return this;
         }
+        printf("aaaa\n");
         trans_evt_cbs.pop();
     }
 
