@@ -26,7 +26,7 @@ class PriorityCmp
 template <typename CallbackType, typename PriorityType>
 bool PriorityCmp<CallbackType, PriorityType>::operator()(const std::pair<CallbackType, PriorityType>& a, const std::pair<CallbackType, PriorityType>& b)
 {
-    return a.second > b.second ? true : false;
+    return a.second < b.second ? true : false;
 }
 
 } // namespace Imagine_StateMachine

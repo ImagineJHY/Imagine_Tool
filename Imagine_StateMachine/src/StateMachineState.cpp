@@ -46,7 +46,6 @@ StateMachineState* StateMachineState::RegisterTransitionEventCallback(const Stat
 {
     trans_evt_cbs_.insert(std::make_pair(evt, std::make_pair(std::bind(
         [](StateMachineState* src, StateMachineState* tgt, StateMachineEvent evt, TransitionConditionCheckCallback cond, TransitionEventCallback cb) -> bool {
-            printf("bbbbb\n");
             if (!cond(src, tgt, evt)) {
                 return false;
             }
