@@ -39,6 +39,8 @@ StateMachine* StateMachine::RegisterState(StateMachineState* state)
 StateMachine* StateMachine::ActiveRootState() const
 {
     root_state_->Enter();
+
+    return this;
 }
 
 StateMachine* StateMachine::EventExecute(const StateMachineEvent& evt)
