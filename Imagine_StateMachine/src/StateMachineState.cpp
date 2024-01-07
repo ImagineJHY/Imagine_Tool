@@ -207,8 +207,10 @@ StateMachineState* StateMachineState::Enter()
     sm_->AddActiveState(this);
     onEnter();
     if (default_subState_ != nullptr) {
+        printf("here\n");
         default_subState_->Enter();
-    }
+        printf("here\n");
+    }printf("here2\n");
 
     return this;
 }
