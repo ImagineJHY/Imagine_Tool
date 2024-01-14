@@ -164,6 +164,7 @@ StateMachineState* StateMachineState::TransitionToState(StateMachineState* new_s
         state_stack.push(parent_state);
         parent_state = parent_state->GetParentState();
     }
+    ExitAllsubState(); // 针对当公共父节点为当前节点的特殊情况, 特殊处理
     while (state_queue.size()) {
         state_queue.front()->Exit();
         state_queue.pop();
