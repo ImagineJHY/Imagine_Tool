@@ -2,8 +2,6 @@
 build/
 build/cmake_install.cmake
 build/CMakeCache.txt
-!build/Makefile
-
 
 # thirdparty
 thirdparty/*
