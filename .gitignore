@@ -14,3 +14,6 @@ thirdparty/*
 
 # vs
 .vscode
+
+# temp
+!thirdparty/temp.cpp

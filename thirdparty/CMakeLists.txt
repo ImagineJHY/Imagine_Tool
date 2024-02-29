@@ -6,7 +6,7 @@ project(IMAGINE_TOOL_THIRDPARTY)
 #     echo "[Constructing LIB][Imagine Tool]: Starting Imagine_Tool_Thirdparty lib target init building..."
 #     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} # 在哪个目录下执行命令
 # )
-add_library(imagine_tool_thirdparty SHARED)
+add_library(imagine_tool_thirdparty SHARED ${CMAKE_CURRENT_SOURCE_DIR}/temp.cpp)
 
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/yaml-cpp/CMakeLists.txt)
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/yaml-cpp)

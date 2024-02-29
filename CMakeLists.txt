@@ -33,7 +33,7 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/Imagine_StateMachine)
 #     echo "[Imagine Tool]: Starting Imagine_Tool target build building..."
 #     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} # 在哪个目录下执行命令
 # )
-add_library(imagine_tool SHARED)
+add_library(imagine_tool SHARED ${CMAKE_CURRENT_SOURCE_DIR}/temp.cpp)
 
 add_dependencies(imagine_tool imagine_statemachine imagine_log imagine_time imagine_tool_thirdparty)
 target_link_libraries(imagine_tool imagine_statemachine imagine_log imagine_time imagine_tool_thirdparty)
